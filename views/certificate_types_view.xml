@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+
+
+    <record id="certificate_types_form_view" model="ir.ui.view">
+    <field name="name">certificate types Form View</field>
+    <field name="model">certificate.type</field>
+    <field name="arch" type="xml">
+        <form>
+            <group>
+                <field name="name"/>
+
+            </group>
+
+        </form>
+    </field>
+    </record>
+
+        <record id="certificate_types_tree_view" model="ir.ui.view">
+    <field name="name">certificate types Tree View</field>
+    <field name="model">certificate.type</field>
+    <field name="arch" type="xml">
+        <tree>
+                        <field name="name"/>
+        </tree>
+    </field>
+    </record>
+
+
+<record id="certificate_types_search_view" model="ir.ui.view">
+<field name="name">certificate types search</field>
+<field name="model">certificate.type</field>
+<field name="arch" type="xml">
+<search string="Types">
+<field name="name" string="Name" filter_domain="[('name', 'ilike', self)]"/>
+
+</search>
+</field>
+</record>
+
+
+    <record id="certificate_types_action" model="ir.actions.act_window">
+    <field name="name">Certificate Types</field>
+    <field name="res_model">certificate.type</field>
+    <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <menuitem id="certificate_root" name="Certificates App" />
+        <menuitem id="certificates" parent="certificate_root"/>
+    <menuitem id="certificates_types" name="Certificates Types" sequence="2" parent="certificate_root" action="certificate_types_action"/>
+
+
+
+    </data>
+</odoo>
