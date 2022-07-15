@@ -11,7 +11,9 @@
         'security/ir.model.access.csv',
         'views/certificate_types_view.xml',
         'views/traffic_department_view.xml',
-        'views/res_partner_view.xml'
+        'views/res_partner_view.xml',
+        'views/sequence.xml',
+        'views/certificate_view.xml',
 
 
 

@@ -25,7 +25,7 @@
 
 
     <record id="res_partners_action" model="ir.actions.act_window">
-    <field name="name">Res Partners</field>
+    <field name="name">Customers Action</field>
     <field name="res_model">res.partner</field>
     <field name="view_mode">tree,form,search</field>
     </record>
