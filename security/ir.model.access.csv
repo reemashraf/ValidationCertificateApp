@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_normal_certificate_types,access.certificate.type,model_certificate_type,normal_user,1,0,0,0
+access_supervisor_certificate_types,access.certificate.type,model_certificate_type,supervisor,1,1,1,1
+access_normal_traffic_departments,access.traffic.department,model_traffic_department,normal_user,1,0,0,0
+access_supervisor_traffic_departments,access.traffic.department,model_traffic_department,supervisor,1,1,1,1
+access_normal_res_partner,access.res.partner,base.model_res_partner,normal_user,1,0,0,0
+access_supervisor_res_partner,access.res.partner,base.model_res_partner,supervisor,1,0,0,0
+
+
+

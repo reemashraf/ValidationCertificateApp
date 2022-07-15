@@ -8,6 +8,7 @@
     """,
     'data': [
         'views/certificate_groups.xml',
+        'security/ir.model.access.csv',
         'views/certificate_types_view.xml',
         'views/traffic_department_view.xml',
         'views/res_partner_view.xml'
