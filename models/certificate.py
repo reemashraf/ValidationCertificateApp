@@ -32,3 +32,9 @@ class Certificate(models.Model):
     def _get_selection(self,context=None):
         current_year = datetime.today().year
         return [(str(current_year-ele) , str(current_year-ele)) for ele in range(20)]
+
+
+    def action_print(self):
+        self.ensure_one()
+        self.print_certificate = False
+        ## add record to database of  time and then print template

@@ -7,6 +7,12 @@
     <field name="model">certificate</field>
     <field name="arch" type="xml">
         <form>
+            <header>
+                <field name="print_certificate" invisible="1"/>
+                <button name="action_print" data-hotkey="v"
+                        string="Print Certificate" type="object"
+                        attrs="{'invisible': [('print_certificate', '=',False)]}"/>
+            </header>
             <group>
                 <field name="vehicle_type"/>
                 <field name="certificate_type_id"/>

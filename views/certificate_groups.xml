@@ -19,12 +19,12 @@
             <field name="category_id" ref="module_category_certificate_supervisor"/>
         </record>
 
-<!--        <record id="rule_hms_user" model="ir.rule">-->
-<!--            <field name="name">User see its records only</field>-->
-<!--            <field name="model_id" ref="hms.patient"/>-->
-<!--            <field name="domain_force"> [('create_uid','=',user.id)]</field>-->
-<!--        </record>-->
-
+        <record id="rule_normal_user" model="ir.rule">
+            <field name="name">User see its records only</field>
+            <field name="model_id" ref="model_certificate"/>
+            <field name="groups" eval="[(4, ref('normal_user'))]"/>
+            <field name="domain_force"> [('create_uid','=',user.id)]</field>
+        </record>
 
     </data>
 </odoo>
