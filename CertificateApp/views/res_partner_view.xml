@@ -1,52 +1,37 @@
 <odoo>
-	<data>
-		<record id="res_partner_tree_inherit" model="ir.ui.view">
-			<field name="name">
-				Res Partner Tree Inherit
-			</field>
-			<field name="model">
-				res.partner
-			</field>
-			<field name="inherit_id" ref="base.view_partner_tree" />
-			<field name="arch" type="xml">
-				<xpath expr="//field[@name='email']" position="attributes">
-					<attribute name="invisible">
-						1
-					</attribute>
-				</xpath>
-				<xpath expr="//field[@name='user_id']" position="attributes">
-					<attribute name="invisible">
-						1
-					</attribute>
-				</xpath>
-				<xpath expr="//field[@name='activity_ids']" position="attributes">
-					<attribute name="invisible">
-						1
-					</attribute>
-				</xpath>
-				<xpath expr="//field[@name='country_id']" position="attributes">
-					<attribute name="invisible">
-						1
-					</attribute>
-				</xpath>
-				<xpath expr="//field[@name='city']" position="attributes">
-					<attribute name="invisible">
-						1
-					</attribute>
-				</xpath>
-			</field>
-		</record>
-		<record id="res_partners_action" model="ir.actions.act_window">
-			<field name="name">
-				Customers Action
-			</field>
-			<field name="res_model">
-				res.partner
-			</field>
-			<field name="view_mode">
-				tree,form,search
-			</field>
-		</record>
-		<menuitem id="res_partners" name="Customers" sequence="4" parent="certificate_root" action="res_partners_action" />
-	</data>
+<data>
+<record id="res_partner_tree_inherit" model="ir.ui.view">
+        <field name="name">Res Partner Tree Inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='email']" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+            <xpath expr="//field[@name='activity_ids']" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+            <xpath expr="//field[@name='country_id']" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+            <xpath expr="//field[@name='city']" position="attributes">
+        <attribute name="invisible">1</attribute>
+    </xpath>
+        </field>
+    </record>
+
+
+    <record id="res_partners_action" model="ir.actions.act_window">
+    <field name="name">Customers Action</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_mode">tree,form,search</field>
+    </record>
+
+    <menuitem id="res_partners" name="Customers" sequence="4" parent="certificate_root" action="res_partners_action"/>
+
+
+</data>
 </odoo>
