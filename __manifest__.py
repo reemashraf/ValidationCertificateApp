@@ -14,6 +14,8 @@
         'views/res_partner_view.xml',
         'views/sequence.xml',
         'views/certificate_view.xml',
+        'reports/reports.xml',
+        'reports/certificate_template.xml',
 
 
 

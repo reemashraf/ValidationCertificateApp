@@ -12,6 +12,7 @@
                 <button name="action_print" data-hotkey="v"
                         string="Print Certificate" type="object"
                         attrs="{'invisible': [('print_certificate', '=',False)]}"/>
+                 <button name="action_allow_reprint" string="Allow Reprint" type="object" groups="CertificateApp.supervisor" class="btn-primary"/>
             </header>
             <group>
                 <field name="vehicle_type"/>

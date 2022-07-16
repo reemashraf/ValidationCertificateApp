@@ -37,4 +37,12 @@ class Certificate(models.Model):
     def action_print(self):
         self.ensure_one()
         self.print_certificate = False
-        ## add record to database of  time and then print template
+        print(self.env.user)
+        vals = {
+            'certificate_id':self.id,
+            'user_id':self.env.user.id,}
+        log = self.env['print.certificate.log'].create(vals)
+        return self.env.ref('CertificateApp.action_certificate_template').report_action(self)
+
+    def action_allow_reprint(self):
+        self.print_certificate = True

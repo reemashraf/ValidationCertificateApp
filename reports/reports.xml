@@ -1,0 +1,11 @@
+<odoo>
+
+<record id="action_certificate_template" model="ir.actions.report">
+<field name="name"> Validation Certificate</field>
+<field name="model">certificate</field>
+<field name="report_type">qweb-pdf</field>
+<field name="report_name">CertificateApp.certificate_template</field>
+<field name="report_file">CertificateApp.certificate_template</field>
+<field name="print_report_name">'Certificate - %s ' % (object.serial_number)</field>
+</record>
+</odoo>
