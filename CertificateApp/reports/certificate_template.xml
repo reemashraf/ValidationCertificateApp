@@ -1,0 +1,78 @@
+<odoo>
+	<data>
+		<template id="certificate_template">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="web.basic_layout">
+						<div class="page" dir="rtl">
+							<div class="my-3">
+								<center>
+									<h2 class="text-danger font-weight-normal">
+										شهادة صلاحية
+									</h2>
+								</center>
+							</div>
+							<div class="text-right mb-2">
+								السيد اللواء مدير أدارة المرور/
+								<span class="text-right" t-field="o.traffic_department_id.name" />
+							</div>
+							<div class="text-left mb-2">
+								تحريرا في /
+								<span class="text-left" t-field="o.create_date" t-options="{'widget': 'date'}" />
+							</div>
+							<center>
+								<span class="font-weight-normal">
+									تحية طيبة و بعد،،،،
+								</span>
+							</center>
+							<div class="text-right my-4">
+								<br />
+								أتشرف بافادة سيادتكم بانه تم تعديل /
+								<span class="text-right" t-field="o.certificate_type_id.name" />
+								<br />
+							</div>
+							<table class="table table-borderless">
+								<tr>
+									<th class="text-right">
+										شاسيه رقم /
+										<span class="text-right" t-field="o.chassis_number" />
+									</th>
+									<th class="text-right">
+										محرك رقم /
+										<span class="text-right" t-field="o.motor_number" />
+									</th>
+								</tr>
+								<tr>
+									<th class="text-right">
+										الماركة /
+										<span class="text-right" t-field="o.brand.name" />
+									</th>
+									<th class="text-right">
+										موديل /
+										<span class="text-right" t-field="o.car_model" />
+									</th>
+								</tr>
+								<tr>
+									<th class="text-right">
+										اسم المالك /
+										<span class="text-right" t-field="o.customer_id.name" />
+									</th>
+								</tr>
+							</table>
+							<div>
+								<p>
+									حيث أن المؤسسة معتمدة بالهيئة العامة للتنمية الصناعية ومصلحة الرقابة الصناعية ومعتمدة بإدارات المرور ولها سجل تجاري صناعي وبطاقة ضريبية بهذه الصفة وقد تم فحص التعديل والتركيب واللحامات والإصلاحات اللازمة طبقا لأصول الصناعة ودون الإخلال بالتصميم الأصلي ودون المساس بالأجزاء الجوهرية للسيارة وقد تم تجربة السيارة على الطرق المصرية ووجد أنها متزنة وهذه شهادة منا بذلك لتقديمها للمرور والمالك مسؤول مسئولية كاملة عن بيانات الشهادة فبرجاء التكرم والتفضل بالموافقة على ترخيص السيارة
+								</p>
+							</div>
+							<div>
+								<center>
+									وتفضلوا بقبول فائق الاحترام و التقدير ،،،،،
+								</center>
+							</div>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>
